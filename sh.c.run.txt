@@ -1,0 +1,106 @@
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ g++ sh.c
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ ./a.out
+gevurah and gevurah
+gevurah and tiferes
+gevurah and netzach
+gevurah and  hod 
+gevurah and  yesod 
+gevurah and malchus
+gevurah and chesed
+tiferes and gevurah
+tiferes and tiferes
+tiferes and netzach
+tiferes and  hod 
+tiferes and  yesod 
+tiferes and malchus
+tiferes and chesed
+netzach and gevurah
+netzach and tiferes
+netzach and netzach
+netzach and  hod 
+netzach and  yesod 
+netzach and malchus
+netzach and chesed
+ hod  and gevurah
+ hod  and tiferes
+ hod  and netzach
+ hod  and  hod 
+ hod  and  yesod 
+ hod  and malchus
+ hod  and chesed
+ yesod  and gevurah
+ yesod  and tiferes
+ yesod  and netzach
+ yesod  and  hod 
+ yesod  and  yesod 
+ yesod  and malchus
+ yesod  and chesed
+malchus and gevurah
+malchus and tiferes
+malchus and netzach
+malchus and  hod 
+malchus and  yesod 
+malchus and malchus
+malchus and chesed
+chesed and gevurah
+chesed and tiferes
+chesed and netzach
+chesed and  hod 
+chesed and  yesod 
+chesed and malchus
+chesed and chesed
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ cat sh.c
+#include <iostream>
+#include <cstdlib>
+int main(){
+	int sh1;
+	int sh2;
+const char* sef[8];
+ sef[1]= "gevurah";
+sef[2]="tiferes";
+ sef[3]= "netzach";
+ sef[4]= " hod ";
+sef[5]=" yesod ";
+ sef[6] = "malchus";
+ sef[7] = "chesed";
+	for(sh1=1;sh1<=7; sh1++){
+			for(sh2=1;sh2<=7;sh2++){
+		std::cout << sef[sh1]<< " and " <<  sef[sh2]<< std::endl;
+		}
+	}
+}
+
+
+ian@ian-HP-Convertible-x360-11-ab1XX:~$ sloccount sh.c
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/sh.c to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+19      top_dir         ansic=19
+
+
+Totals grouped by language (dominant language first):
+ansic:           19 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 19
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.04)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.06 (0.72)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.05
+Total Estimated Cost to Develop                           = $ 421
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
