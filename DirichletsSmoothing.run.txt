@@ -1,0 +1,126 @@
+ian@ian-Latitude-3190-2-in-1:~$ gcc dirichiletsmoothing.c
+ian@ian-Latitude-3190-2-in-1:~$ ./a.out
+Dirichlet smoothing result: 0.0537
+Lambda smoothing result: 0.3600
+ian@ian-Latitude-3190-2-in-1:~$ cat dirichiletsmoothing.c
+#include <stdio.h>
+
+double dirichlet_smoothing(double npX, double n, double n0, double p0) {
+    return (npX + n0 * p0) / (n + n0);
+}
+
+double lambda_smoothing(double lambda, double pml, double pwC) {
+    return ((1 - lambda) * pml) + (lambda * pwC);
+}
+
+int main() {
+    double npX = 10.0;  // nP(X)
+    double n = 50.0;    // number of data points
+    double n0 = 2000.0; // smoothing parameter
+    double p0 = 0.05;   // guess for P(X)
+
+    double lambda = 0.7; // smoothing parameter
+    double pml = 0.5;    // maximum likelihood estimation
+    double pwC = 0.3;    // probability of w given the collection of documents C
+
+    printf("Dirichlet smoothing result: %.4f\n", dirichlet_smoothing(npX, n, n0, p0));
+    printf("Lambda smoothing result: %.4f\n", lambda_smoothing(lambda, pml, pwC));
+
+    return 0;
+}
+ian@ian-Latitude-3190-2-in-1:~$ sloccount dirichiletsmoothing.c
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/dirichiletsmoothing.c to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+19      top_dir         ansic=19
+
+
+Totals grouped by language (dominant language first):
+ansic:           19 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 19
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.04)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.06 (0.72)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.05
+Total Estimated Cost to Develop                           = $ 421
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
+ian@ian-Latitude-3190-2-in-1:~$ gcc dirichiletsmoothing.c
+ian@ian-Latitude-3190-2-in-1:~$ ./a.out
+Dirichlet smoothing result: 0.0537
+Lambda smoothing result: 0.3600
+ian@ian-Latitude-3190-2-in-1:~$ cat dirichiletsmoothing.c
+#include <stdio.h>
+
+double dirichlet_smoothing(double npX, double n, double n0, double p0) {
+    return (npX + n0 * p0) / (n + n0);
+}
+
+double lambda_smoothing(double lambda, double pml, double pwC) {
+    return ((1 - lambda) * pml) + (lambda * pwC);
+}
+
+int main() {
+    double npX = 10.0;  // nP(X)
+    double n = 50.0;    // number of data points
+    double n0 = 2000.0; // smoothing parameter
+    double p0 = 0.05;   // guess for P(X)
+
+    double lambda = 0.7; // smoothing parameter
+    double pml = 0.5;    // maximum likelihood estimation
+    double pwC = 0.3;    // probability of w given the collection of documents C
+
+    printf("Dirichlet smoothing result: %.4f\n", dirichlet_smoothing(npX, n, n0, p0));
+    printf("Lambda smoothing result: %.4f\n", lambda_smoothing(lambda, pml, pwC));
+
+    return 0;
+}
+ian@ian-Latitude-3190-2-in-1:~$ sloccount dirichiletsmoothing.c
+Have a non-directory at the top, so creating directory top_dir
+Adding /home/ian/dirichiletsmoothing.c to top_dir
+Categorizing files.
+Finding a working MD5 command....
+Found a working MD5 command.
+Computing results.
+
+
+SLOC	Directory	SLOC-by-Language (Sorted)
+19      top_dir         ansic=19
+
+
+Totals grouped by language (dominant language first):
+ansic:           19 (100.00%)
+
+
+
+
+Total Physical Source Lines of Code (SLOC)                = 19
+Development Effort Estimate, Person-Years (Person-Months) = 0.00 (0.04)
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))
+Schedule Estimate, Years (Months)                         = 0.06 (0.72)
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))
+Estimated Average Number of Developers (Effort/Schedule)  = 0.05
+Total Estimated Cost to Develop                           = $ 421
+ (average salary = $56,286/year, overhead = 2.40).
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+SLOCCount is Open Source Software/Free Software, licensed under the GNU GPL.
+SLOCCount comes with ABSOLUTELY NO WARRANTY, and you are welcome to
+redistribute it under certain conditions as specified by the GNU GPL license;
+see the documentation for details.
+Please credit this data as "generated using David A. Wheeler's 'SLOCCount'."
